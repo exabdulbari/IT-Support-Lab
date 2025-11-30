@@ -422,6 +422,8 @@ Highlight additional enterprise-level IT Support tasks that I understand and can
 - Knowledge of security-driven GPO policies
 - Foundation for SOC, cybersecurity, and server administration roles
 
+---
+
 ### **Career Readiness**
 This project demonstrates job-ready technical skills for roles such as:
 - IT Support  
@@ -430,4 +432,4 @@ This project demonstrates job-ready technical skills for roles such as:
 - Desktop Support  
 - Junior System Administrator  
 
----
+
