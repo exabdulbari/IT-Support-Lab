@@ -259,7 +259,7 @@ Document the real troubleshooting steps performed to fix GPO issues during the l
 - gpresult /r
 - whoami /groups
 - ipconfig /all
-- 
+
 ---
 
 #### **What I Learned**
@@ -269,6 +269,35 @@ Document the real troubleshooting steps performed to fix GPO issues during the l
 - Why Group Policy refresh cycles matter
 
 ---
+
+## 🧩 5. Shared Folder & NTFS Permissions
+
+### **Goal**
+Create a shared folder on the Domain Controller and configure permissions so PC01 can access it.
+
+### **Steps Completed**
+- Created folder: `C:\ITShared`
+- Enabled sharing:
+  - Share Name: **ITShared**
+  - Share Permissions: **Everyone – Read/Write**
+- Set NTFS Permissions:
+  - Domain Users – Modify
+  - Administrators – Full Control
+- Verified access from PC01:
+  - `\\WIN-BPRUP661MS4\ITShared`
+- Copied files from PC01 → DC to confirm permissions
+
+### **Screenshots (Add Yours Below)**
+> - Shared folder properties  
+> - NTFS permissions tab  
+> - PC01 accessing the shared folder  
+
+### **What I Learned**
+- Difference between **Share Permissions** and **NTFS Permissions**
+- Why NTFS permissions override share permissions
+- How to troubleshoot access denied issues
+- How shared folders are used in corporate environments
+
 
 
 
