@@ -394,21 +394,40 @@ Highlight additional enterprise-level IT Support tasks that I understand and can
 - How Group Policy automates administrative work
 - How companies scale management of printers, profiles, scripts, and software
 
-
 ---
 
-#
+## 🧩 8. Summary of Skills Learned
 
+### **Core IT Support Skills**
+- Installed and configured Windows Server 2022
+- Built an Active Directory domain (lab.local)
+- Created and managed OUs, users, and groups
+- Joined Windows clients to the domain
+- Configured DNS for domain environments
+- Managed Group Policy (USB block, Control Panel block, drive mapping)
+- Created shared folders and configured NTFS/share permissions
+- Troubleshot GPO, DNS, WinRM, Kerberos, and network profile issues
 
+### **Technical Tools & Commands Used**
+- Event Viewer
+- DNS Manager
+- Group Policy Management Console (GPMC)
+- PowerShell (`gpresult`, `gpupdate`, `ipconfig`, `nslookup`)
+- Network troubleshooting tools
 
+### **What This Lab Demonstrates**
+- Ability to design and deploy a working domain environment
+- Understanding of user/device management in Active Directory
+- Skills in troubleshooting real-world IT Support problems
+- Knowledge of security-driven GPO policies
+- Foundation for SOC, cybersecurity, and server administration roles
 
+### **Career Readiness**
+This project demonstrates job-ready technical skills for roles such as:
+- IT Support  
+- IT Technician  
+- Service Desk  
+- Desktop Support  
+- Junior System Administrator  
 
-
-- Shared Folder & NTFS Permissions
-- Troubleshooting (GPO, DNS, Time Sync, WinRM)
-- Extra IT Support Features (Optional)
-  - Printer via GPO
-  - Folder Redirection
-  - User Logon Scripts
-  - Software Deployment via GPO
-- Summary of Skills Learned
+---
