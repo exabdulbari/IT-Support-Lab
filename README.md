@@ -144,12 +144,12 @@ Prevent users from using USB storage devices on domain-joined computers for secu
 
 ### 🧩 4.2 Block Control Panel (GPO)
 
-### **Goal**
+#### **Goal**
 Prevent users from accessing the Windows Control Panel to avoid unauthorized system changes.
 
 ---
 
-### **Steps Completed**
+#### **Steps Completed**
 - Opened **Group Policy Management**
 - Created or edited GPO: **Block Control Panel**
 - Navigated to:
@@ -163,14 +163,14 @@ Prevent users from accessing the Windows Control Panel to avoid unauthorized sys
 
 ---
 
-### **Screenshots (Add Yours Below)**
+#### **Screenshots (Add Yours Below)**
 > - GPO location under User Configuration  
 > - Enabled policy  
 > - PC01 showing Control Panel blocked  
 
 ---
 
-### **What I Learned**
+#### **What I Learned**
 - Difference between **User Configuration** and **Computer Configuration**
 - Some settings only apply to users, not computers
 - How to apply restrictions based on OU targeting
