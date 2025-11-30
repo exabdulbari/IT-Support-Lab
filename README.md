@@ -261,16 +261,7 @@ Document the real troubleshooting steps performed to fix GPO issues during the l
 - ipconfig /all
 
 ---
-
-#### **What I Learned**
-- How to diagnose GPO issues using `gpresult`
-- How OU placement affects GPO inheritance
-- How to determine whether settings are User-based or Computer-based
-- Why Group Policy refresh cycles matter
-
----
-
-## 🧩 5. Shared Folder & NTFS Permissions
+# 🧩 5. Shared Folder & NTFS Permissions
 
 ### **Goal**
 Create a shared folder on the Domain Controller and configure permissions so PC01 can access it.
@@ -297,6 +288,18 @@ Create a shared folder on the Domain Controller and configure permissions so PC0
 - Why NTFS permissions override share permissions
 - How to troubleshoot access denied issues
 - How shared folders are used in corporate environments
+
+---
+
+#### **What I Learned**
+- How to diagnose GPO issues using `gpresult`
+- How OU placement affects GPO inheritance
+- How to determine whether settings are User-based or Computer-based
+- Why Group Policy refresh cycles matter
+
+---
+
+#
 
 
 
