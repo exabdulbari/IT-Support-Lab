@@ -217,7 +217,7 @@ Automatically map a network shared folder to drive **Z:** for domain users using
 - How to automate network drive mapping for users
 - How to troubleshoot drive mapping conflicts (red X issue)
 
-### 4.4 GPO Troubleshooting
+### 🧩 4.4 GPO Troubleshooting
 
 #### **Goal**
 Document the real troubleshooting steps performed to fix GPO issues during the lab.
