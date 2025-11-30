@@ -367,6 +367,36 @@ Document the real troubleshooting performed in the lab to demonstrate problem-so
 
 ---
 
+## 🧩 7. Advanced IT Support Features
+
+### **Goal**
+Highlight additional enterprise-level IT Support tasks that I understand and can implement when required.
+
+### **Advanced Features**
+#### **1. Printer Deployment via Group Policy**
+- Configure shared printers
+- Deploy automatically to users using GPO Preferences
+
+#### **2. Folder Redirection**
+- Redirect Documents/Desktop to a network location
+- Used in corporate environments for backup and roaming profiles
+
+#### **3. Logon and Startup Scripts**
+- Run PowerShell or Batch scripts during logon
+- Used to automate repetitive tasks
+
+#### **4. Software Deployment via GPO**
+- Deploy MSI applications (e.g., 7-Zip) to Users or Computers
+- Helps standardize software across the organization
+
+### **What I Learned**
+- Awareness of additional enterprise features
+- How Group Policy automates administrative work
+- How companies scale management of printers, profiles, scripts, and software
+
+
+---
+
 #
 
 
