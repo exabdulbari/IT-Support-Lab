@@ -104,7 +104,7 @@ Join a Windows 10 client computer (PC01) to the Active Directory domain **lab.lo
 - Common domain join errors and how to troubleshoot them  
 - How to verify domain connectivity
 
-## 🧩 4. Group Policy Management (GPO)
+# 🧩 4. Group Policy Management (GPO)
   ## 🧩 4.1 Block USB Storage (GPO)
 
 ### **Goal**
