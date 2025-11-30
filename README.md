@@ -254,6 +254,14 @@ Document the real troubleshooting steps performed to fix GPO issues during the l
 
 ---
 
+### **What I Learned**
+- How to diagnose GPO issues using `gpresult`
+- How OU placement affects GPO inheritance
+- How to determine whether settings are User-based or Computer-based
+- Why Group Policy refresh cycles matter
+
+---
+
 #### **Useful Commands Learned**
 - gpupdate /force
 - gpresult /r
