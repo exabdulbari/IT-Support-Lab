@@ -175,8 +175,49 @@ Prevent users from accessing the Windows Control Panel to avoid unauthorized sys
 - Some settings only apply to users, not computers
 - How to apply restrictions based on OU targeting
 - How companies prevent unauthorized changes by users
-  
-  - Drive Mapping
+
+### 🧩 4.3 Drive Mapping (GPO)
+
+#### **Goal**
+Automatically map a network shared folder to drive **Z:** for domain users using Group Policy Preferences.
+
+---
+
+#### **Steps Completed**
+- Opened **Group Policy Management**
+- Created GPO: **Map Network Drive**
+- Navigated to:
+  - User Configuration  
+    → Preferences  
+    → Windows Settings  
+    → Drive Maps  
+- Created a new drive mapping:
+  - Action: **Create**
+  - Location: `\\WIN-BPRUP661MS4\ITShared`
+  - Drive Letter: **Z:**
+  - Reconnect: Enabled
+- Linked the GPO to the correct **Users OU**
+- Ran `gpupdate /force` on PC01
+- Verified that:
+  - Z: drive appears in File Explorer
+  - Drive reconnects after reboot
+
+---
+
+#### **Screenshots (Add Yours Below)**
+> - Drive Maps settings  
+> - GPO link to Users OU  
+> - Z: drive visible on PC01  
+
+---
+
+#### **What I Learned**
+- How to use Group Policy **Preferences**
+- Difference between “Create”, “Replace”, “Update”, “Delete”
+- How to automate network drive mapping for users
+- How to troubleshoot drive mapping conflicts (red X issue)
+
+
 - Shared Folder & NTFS Permissions
 - Troubleshooting (GPO, DNS, Time Sync, WinRM)
 - Extra IT Support Features (Optional)
