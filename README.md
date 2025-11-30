@@ -217,6 +217,56 @@ Automatically map a network shared folder to drive **Z:** for domain users using
 - How to automate network drive mapping for users
 - How to troubleshoot drive mapping conflicts (red X issue)
 
+### 4.4 GPO Troubleshooting
+
+#### **Goal**
+Document the real troubleshooting steps performed to fix GPO issues during the lab.
+
+---
+
+#### **Problems Encountered & Solutions**
+
+##### **1. GPO not applying (Control Panel, USB, Drive Map)**
+- Ran `gpupdate /force` but settings did not apply.
+- Fixed by:
+  - Checking if PC01 was in the correct OU
+  - Running `gpresult /r` to verify which GPOs applied
+  - Ensuring GPO links were enabled
+  - Confirming no conflicting GPOs existed
+
+---
+
+##### **2. Drive Mapping shows Red X on Z:**
+- Cause: drive letter conflict or network not ready.
+- Fix:
+  - Changed drive letter to an unused letter
+  - Verified share permissions on ITShared
+  - Ensured PC01 network was “DomainAuthenticated”
+
+---
+
+##### **3. GPO settings applied slowly**
+- Cause: Windows Default GPO refresh cycle (90 minutes)
+- Learned:
+  - Computer GPO refresh: every 90 min (±30 min)
+  - User GPO refresh: every 90 min (±30 min)
+  - Use `gpupdate /force` for instant update
+
+---
+
+#### **Useful Commands Learned**
+- gpupdate /force
+- gpresult /r
+- whoami /groups
+- ipconfig /all
+
+---
+
+#### **What I Learned**
+- How to diagnose GPO issues using `gpresult`
+- How OU placement affects GPO inheritance
+- How to determine whether settings are User-based or Computer-based
+- Why Group Policy refresh cycles matter
 
 - Shared Folder & NTFS Permissions
 - Troubleshooting (GPO, DNS, Time Sync, WinRM)
