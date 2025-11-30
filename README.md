@@ -261,6 +261,15 @@ Document the real troubleshooting steps performed to fix GPO issues during the l
 - ipconfig /all
 
 ---
+
+#### **What I Learned**
+- How to diagnose GPO issues using `gpresult`
+- How OU placement affects GPO inheritance
+- How to determine whether settings are User-based or Computer-based
+- Why Group Policy refresh cycles matter
+  
+---
+
 # 🧩 5. Shared Folder & NTFS Permissions
 
 ### **Goal**
@@ -290,12 +299,71 @@ Create a shared folder on the Domain Controller and configure permissions so PC0
 - How shared folders are used in corporate environments
 
 ---
+## 🧩 6. Troubleshooting (DNS, Time Sync, Network, GPO, WinRM)
 
-#### **What I Learned**
-- How to diagnose GPO issues using `gpresult`
-- How OU placement affects GPO inheritance
-- How to determine whether settings are User-based or Computer-based
-- Why Group Policy refresh cycles matter
+### **Goal**
+Document the real troubleshooting performed in the lab to demonstrate problem-solving skills expected in IT Support roles.
+
+### **Issues Encountered & Fixes**
+
+#### **1. PC01 DNS not resolving domain**
+- Symptoms:
+  - Cannot join domain
+  - `ping lab.local` fails
+- Fix:
+  - Set DNS on PC01 to **192.168.1.10**
+  - Flushed DNS cache: `ipconfig /flushdns`
+  - Verified using `nslookup`
+
+#### **2. Domain time mismatch (Kerberos failure)**
+- Symptoms:
+  - Login errors
+  - GPO not applying
+  - Event logs show Kerberos time skew
+- Fix:
+  - Set DC time correctly
+  - Verified NTP sync
+  - Restarted Windows Time service:  
+    `Restart-Service w32time`
+
+#### **3. Network Category incorrect (Public → DomainAuthenticated)**
+- Symptoms:
+  - WinRM/WEF failing
+  - GPO slow or not applying
+- Fix:
+  - Reset network location
+  - Ensured PC01 was joined to domain
+  - Confirmed status: `Get-NetConnectionProfile`
+
+#### **4. WinRM service disabled**
+- Symptoms:
+  - WEF not working
+  - Error: WinRM firewall exception not allowed
+- Fix:
+  - Enabled WinRM service: `Start-Service winrm`
+  - Set WinRM to delayed-start
+
+#### **5. File share access denied**
+- Symptoms:
+  - PC01 cannot copy to `\\WIN-BPRUP661MS4\ITShared`
+- Fix:
+  - Corrected NTFS permissions (Modify for Domain Users)
+  - Ensured Share permissions allowed Read/Write
+
+### **Useful Commands Learned**
+- ipconfig /all
+- nslookup
+- gpupdate /force
+- gpresult /r
+- Get-NetconnectionProfile
+- Restart-Service winrm
+- Restart-Service w32time
+
+### **What I Learned**
+- How DNS affects almost every AD function
+- How to interpret common AD/GPO/WinRM errors
+- How network profiles affect domain features
+- How to systematically troubleshoot Windows issues
 
 ---
 
