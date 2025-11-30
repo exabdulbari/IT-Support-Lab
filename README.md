@@ -103,8 +103,45 @@ Join a Windows 10 client computer (PC01) to the Active Directory domain **lab.lo
 - Why DNS must point to the Domain Controller  
 - Common domain join errors and how to troubleshoot them  
 - How to verify domain connectivity
-- Group Policy Management (GPO)
-  - Block USB
+
+## 🧩 4. Group Policy Management (GPO)
+  ## 🧩 4.1 Block USB Storage (GPO)
+
+### **Goal**
+Prevent users from using USB storage devices on domain-joined computers for security and data protection.
+
+---
+
+### **Steps Completed**
+- Opened **Group Policy Management** on the Domain Controller
+- Created a new GPO: **Block USB Storage**
+- Edited the GPO:
+  - Computer Configuration  
+    → Administrative Templates  
+    → System  
+    → Removable Storage Access  
+    → Deny All Access (Enabled)
+- Linked the GPO to the **PCs OU**
+- Forced policy update using:
+  - `gpupdate /force` (on PC01)
+- Verified USB storage is blocked on PC01
+
+---
+
+### **Screenshots (Add Yours Below)**
+> - GPO settings for Removable Storage Access  
+> - GPO link to PCs OU  
+> - USB blocked message on PC01  
+
+---
+
+### **What I Learned**
+- How to create and link a GPO  
+- How GPO inheritance works  
+- Difference between **Computer Configuration** and **User Configuration**  
+- How to use `gpupdate /force` to refresh GPO  
+- Why organizations block external USB storage  
+
   - Block Control Panel
   - Drive Mapping
 - Shared Folder & NTFS Permissions
