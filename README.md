@@ -1,7 +1,7 @@
 ## 📘 IT Support Lab Documentation
 
 ### Table of Contents
-- Active Directory & Domain Setup
+## 🧩 1. Active Directory & Domain Setup
     ### **Goal**
     Set up a Windows Server 2022 machine as a Domain Controller for the domain **lab.local**.
     
