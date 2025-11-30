@@ -68,7 +68,41 @@ Configure DNS on the Domain Controller so clients inside **lab.local** can resol
 - Why DC must point DNS to itself  
 - How to test DNS using nslookup  
 - Why clients must use the Domain Controller for DNS  
-- Client Domain Join (PC01)
+
+## 🧩 3. Client Domain Join (PC01)
+
+### **Goal**
+Join a Windows 10 client computer (PC01) to the Active Directory domain **lab.local**.
+
+---
+
+### **Steps Completed**
+- Set PC01 network configuration:
+  - Joined the same subnet as the Domain Controller
+  - Set DNS server to **192.168.1.10**
+- Verified network connectivity using:
+  - `ping WIN-BPRUP661MS4`
+  - `ping lab.local`
+- Joined PC01 to the domain:
+  - System Properties → Change Settings → Domain: **lab.local**
+- Restarted PC01 to apply the domain join
+- Logged in using a domain account to verify successful connection
+
+---
+
+### **Screenshots (Add Yours Below)**
+> - Network settings on PC01  
+> - Domain join confirmation  
+> - Login screen showing domain user option  
+> - System Properties showing “Domain: lab.local”  
+
+---
+
+### **What I Learned**
+- How a Windows client joins a domain  
+- Why DNS must point to the Domain Controller  
+- Common domain join errors and how to troubleshoot them  
+- How to verify domain connectivity
 - Group Policy Management (GPO)
   - Block USB
   - Block Control Panel
