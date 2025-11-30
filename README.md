@@ -142,7 +142,7 @@ Prevent users from using USB storage devices on domain-joined computers for secu
 - How to use `gpupdate /force` to refresh GPO  
 - Why organizations block external USB storage  
 
-### 4.2 Block Control Panel (GPO)
+### 🧩 4.2 Block Control Panel (GPO)
 
 ### **Goal**
 Prevent users from accessing the Windows Control Panel to avoid unauthorized system changes.
@@ -175,7 +175,7 @@ Prevent users from accessing the Windows Control Panel to avoid unauthorized sys
 - Some settings only apply to users, not computers
 - How to apply restrictions based on OU targeting
 - How companies prevent unauthorized changes by users
-
+  
   - Drive Mapping
 - Shared Folder & NTFS Permissions
 - Troubleshooting (GPO, DNS, Time Sync, WinRM)
