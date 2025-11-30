@@ -142,7 +142,40 @@ Prevent users from using USB storage devices on domain-joined computers for secu
 - How to use `gpupdate /force` to refresh GPO  
 - Why organizations block external USB storage  
 
-  - Block Control Panel
+### 4.2 Block Control Panel (GPO)
+
+### **Goal**
+Prevent users from accessing the Windows Control Panel to avoid unauthorized system changes.
+
+---
+
+### **Steps Completed**
+- Opened **Group Policy Management**
+- Created or edited GPO: **Block Control Panel**
+- Navigated to:
+  - User Configuration  
+    → Administrative Templates  
+    → Control Panel  
+- Enabled the policy: **Prohibit access to Control Panel and PC settings**
+- Linked the GPO to the **Users OU**
+- Ran `gpupdate /force` on PC01
+- Logged in as a domain user to verify Control Panel is blocked
+
+---
+
+### **Screenshots (Add Yours Below)**
+> - GPO location under User Configuration  
+> - Enabled policy  
+> - PC01 showing Control Panel blocked  
+
+---
+
+### **What I Learned**
+- Difference between **User Configuration** and **Computer Configuration**
+- Some settings only apply to users, not computers
+- How to apply restrictions based on OU targeting
+- How companies prevent unauthorized changes by users
+
   - Drive Mapping
 - Shared Folder & NTFS Permissions
 - Troubleshooting (GPO, DNS, Time Sync, WinRM)
